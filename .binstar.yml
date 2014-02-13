@@ -1,0 +1,9 @@
+package: testci
+platform: 
+  - linux-64
+test:
+  - printenv
+
+script:
+  - printenv
+
