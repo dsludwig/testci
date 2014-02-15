@@ -5,6 +5,9 @@ engine:
   - python=2
   - python=3
 
+before_script:
+  - conda install setuptools
+
 script:
   - python setup.py develop
   - python -m unittest discover
