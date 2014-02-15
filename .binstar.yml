@@ -4,13 +4,7 @@ platform:
 engine:
   - python=2
   - python=3
-  
-test:
-  - printenv
 
 script:
-  - ls -la
-  - printenv
-  - |
-    echo 1
-    echo 2
+  - python setup.py develop
+  - python -m unittest discover
