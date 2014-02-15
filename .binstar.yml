@@ -13,3 +13,6 @@ before_script:
 script:
   - python setup.py develop
   - python -m unittest discover
+
+build_artifacts:
+  - coverage
