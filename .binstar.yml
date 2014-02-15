@@ -1,9 +1,14 @@
 package: testci
 platform: 
   - linux-64
+env:
+  - FAIL=yes
+  - FAIL=
+  
 test:
   - printenv
 
 script:
   - printenv
-
+  - [[ -z "$FAIL" ]] && adsfasdfasdfsa
+  
