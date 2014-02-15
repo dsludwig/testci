@@ -10,5 +10,5 @@ test:
 
 script:
   - printenv
-  - [[ -z "$FAIL" ]] && adsfasdfasdfsa
-  
+  - '[[ -z "$FAIL" ]] && adsfasdfasdfsa'
+
