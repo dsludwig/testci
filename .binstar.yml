@@ -6,9 +6,8 @@ engine:
   - python=3
 
 before_script:
-  - conda install setuptools
-  - conda install pip
-  - pip install coverage
+  - conda install -q setuptools pip
+  - pip install coverage -q
 
 script:
   - python setup.py develop
