@@ -1,14 +1,16 @@
 package: testci
 platform: 
   - linux-64
-env:
-  - FAIL=yes
-  - FAIL=
+engine:
+  - python=2
+  - python=3
   
 test:
   - printenv
 
 script:
+  - ls -la
   - printenv
-  - '[[ -z "$FAIL" ]] && adsfasdfasdfsa'
-
+  - >
+  echo 1
+  echo 2
