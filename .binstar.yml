@@ -1,11 +1,13 @@
 package: testci
 platform: 
   - linux-32
+  - linux-64
 engine:
   - python=2
   - python=3
 
 before_script:
+  - python -V
   - conda install -q setuptools pip
   - pip install coverage -q
 
