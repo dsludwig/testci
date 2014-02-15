@@ -12,7 +12,7 @@ before_script:
 
 script:
   - python setup.py develop
-  - python -m unittest discover
+  - python testci/tests/runtests.py --html
 
 build_artifacts:
   - coverage
