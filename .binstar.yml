@@ -1,6 +1,7 @@
 notifications:
-  email: srossross@gmail.com
-  on_success: always # default is change
+  email: 
+    recipients: srossross@gmail.com
+    on_success: always # default is change
 ---
 
 package: testci
