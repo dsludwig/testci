@@ -1,3 +1,8 @@
+notifications:
+  email: srossross@gmail.com
+  on_success: always # default is change
+---
+
 package: testci
 platform: 
   - linux-32
