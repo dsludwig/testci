@@ -1,6 +1,6 @@
 notifications:
   email: 
-    recipients: srossross@gmail.com
+    recipients: sean
     on_success: always # default is change
 ---
 
@@ -20,6 +20,9 @@ before_script:
 script:
   - python setup.py develop
   - python testci/tests/runtests.py --html
+  - python setup.py sdist
+
+build_targets: pypi
 
 build_artifacts:
   - coverage
