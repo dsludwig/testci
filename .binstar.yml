@@ -1,6 +1,6 @@
 package: testci
 platform: 
-  - linux-64
+  - osx-64
 test:
   - printenv
 
