@@ -3,4 +3,8 @@ platform:
   - win-64
 test:
   - echo Hello World
-
+---
+platform: 
+  - linux-64
+test:
+  - echo Hello World
