@@ -3,7 +3,14 @@ Test out the new binstar Build
 
 **Warning:** There are only binstar-build conda packages for osx-64 and linux-64
 This will not work on windows
-  
+
+**Warning:** If you get an error message like
+
+    [BinstarError] Invalid queue build-binstar-continuum
+    
+Then you need to ask a binstar admin to add you to the `build-binstar-continuum` user
+group
+ 
 # Install binstar-build
 
 conda install -c binstar binstar-build
@@ -24,6 +31,11 @@ binstar-build -s alpha submit \
 
 A breakdown of the submit command:
  
+## The .binstar.yml file
+
+The build script and platforms are controlled with a  [.binstar.yml](https://github.com/srossross/testci/blob/master/.binstar.yml) file,
+Check out the in-line comments for what the submit command is doing behind the scenes.
+
 ### -s alpha
 
 This tells the binstar-build command line to use the [alpha binstar site](http://alpha.binstar.org) 
@@ -64,4 +76,7 @@ any files to binstar.
 
 This tells binstar what queue you want to use.  
 
+The format is:
+
+    build-QUEUE_OWNER-QUEUE_NAME
 
