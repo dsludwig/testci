@@ -40,10 +40,21 @@ Check out the in-line comments for what the submit command is doing behind the s
 
 ### -s alpha
 
-This tells the binstar-build command line to use the [alpha binstar site](http://alpha.binstar.org) 
+This tells the binstar-build command line to use the [alpha binstar site](http://alpha.binstar.org)
+ 
 To make this your default, run 
 
-    binstar config 
+    binstar config --set default_site alpha
+    
+**Note: ** if you set alpha as your default site you can always 
+use the [main binstar site](http://binstar.org) with:
+ 
+    binstar-build -s binstar ...
+    
+or
+
+    binstar -s binstar ...
+
 
 ### https://github.com/srossross/testci
 
