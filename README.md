@@ -11,9 +11,11 @@ This will not work on windows
 Then you need to ask a binstar admin to add you to the `build-binstar-continuum` user
 group
  
-# Install binstar-build
+# Submitting your build to the queue
 
-conda install -c binstar binstar-build
+## Install binstar-build
+
+    conda install -c binstar binstar-build
 
 **Make sure** that you are on binstar-build version 0.7.1
  
