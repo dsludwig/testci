@@ -1,9 +1,6 @@
 package: testci
 platform: 
-  - linux-64
+  - win-64
 test:
-  - printenv
-
-script:
-  - printenv
+  - echo Hello World
 
