@@ -39,7 +39,18 @@ You can also build from a subdirectory and/or a branch of the repo
 
     https://github.com/USERNAME/REPO#BRANCHNAME --sub-dir SUB_DIRECTORY
     
-    
+The following command is also valid:
+
+```sh
+binstar-build -s alpha submit \
+    https://github.com/srossross/testci#test_sub_dir \
+    --sub-dir recipe_dir
+    --test-only 
+    --queue build-binstar-continuum 
+```
+
+
+
  *  **Warning:** `SUB_DIRECTORY` Must be a valid directory within your repo and `SUB_DIRECTORY`
 Must contain a valid `.binstar.yml` file 
  *  **Warning:** only github.com urls are supported.
