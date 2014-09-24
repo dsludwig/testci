@@ -8,7 +8,12 @@ test:
   # Here I am using the windows cmd.exe just to show that this is windows
   #, but this can be a any batch script command or just 'echo Hello ...'
   - cmd /c echo Hello Windows Batch Command
+script:
   - conda build .
+
+# Tell the build worker we want to upload the resulting conda package
+build_targets: conda
+
 
 # The --- syntax is a valid yaml syntax to denote a new document.
 # In this case --- Shows that we are *appending* a new bulid configuration
@@ -20,12 +25,19 @@ test:
   # Here I am using the posix bash shell just to show that this is posix
   #, but this can be a any bash command or just 'echo Hello ...'
   - bash -c 'echo Hello Posix World'
+script:
   - conda build .
+
+# Tell the build worker we want to upload the resulting conda package
+build_targets: conda
+
+
 ##########################################################################################
 # Advanced Note
 # Since echo is the same for windoes as is it for posix, we could remove the '---' document 
 # seporator and the following .binstar.yaml configuration would work as well.
 ##########################################################################################
+
 # package: testci
 # platform: 
 #   - win-64
@@ -33,3 +45,4 @@ test:
 # test:
 #   - echo Hello Windows or Posix Command
 #   - conda build .
+# build_targets: conda
