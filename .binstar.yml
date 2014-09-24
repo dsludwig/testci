@@ -8,6 +8,7 @@ test:
   # Here I am using the windows cmd.exe just to show that this is windows
   #, but this can be a any batch script command or just 'echo Hello ...'
   - cmd /c echo Hello Windows Batch Command
+  - conda build .
 
 # The --- syntax is a valid yaml syntax to denote a new document.
 # In this case --- Shows that we are *appending* a new bulid configuration
@@ -19,7 +20,7 @@ test:
   # Here I am using the posix bash shell just to show that this is posix
   #, but this can be a any bash command or just 'echo Hello ...'
   - bash -c 'echo Hello Posix World'
-
+  - conda build .
 ##########################################################################################
 # Advanced Note
 # Since echo is the same for windoes as is it for posix, we could remove the '---' document 
@@ -31,3 +32,4 @@ test:
 #   - linux-64
 # test:
 #   - echo Hello Windows or Posix Command
+#   - conda build .
