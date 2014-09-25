@@ -2,7 +2,8 @@ Test out the new binstar Build
 ================================
 
 **Warning:** There are only binstar-build conda packages for osx-64 and linux-64
-This will not work on windows
+To submit jobs **from** a windows machine, you will need to install `binstar-client` and `binstar-build-client` from source. 
+This will be fixed soon.
 
 **Warning:** If you get an error message like
 
