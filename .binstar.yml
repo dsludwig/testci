@@ -21,6 +21,7 @@ build_targets: conda
 
 platform: 
   - linux-64
+  - osx-64
 test:
   # Here I am using the posix bash shell just to show that this is posix
   #, but this can be a any bash command or just 'echo Hello ...'
@@ -42,6 +43,7 @@ build_targets: conda
 # platform: 
 #   - win-64
 #   - linux-64
+#   - osx-64
 # test:
 #   - echo Hello Windows or Posix Command
 #   - conda build .
