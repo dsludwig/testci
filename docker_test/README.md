@@ -6,7 +6,7 @@ The New binstar docker worker runs your linux-64 builds in docker containers. Yo
 
 Why docker builds?
 
- 1. Customize your build box. 
+ 1. Customize your build box. [doc](#use-your-own-docker-container)
  2. Test your builds locally. With docker it is easy to reproduce the build locally
  3. Test in isolation. Each test start from the original container state. Your new builds will not be affected by past builds.
  
