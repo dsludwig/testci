@@ -87,7 +87,7 @@ The format is:
 
  1. Go to the [docker hub](https://hub.docker.com) and sign up for a new account.
  1. Create a new image from the binstar/linux-64 image. 
-     1. Create a Docker file: 
+     1. Create a `Dockerfile`: 
         ```
         FROM binstar/linux-64
         
