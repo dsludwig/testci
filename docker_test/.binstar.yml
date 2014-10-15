@@ -1,0 +1,11 @@
+# Specify the package name 
+package: testci
+
+# Use the default docker image
+docker_image: binstar/linux-64
+
+test:
+  - echo Hello Docker
+
+script:
+  - conda build .

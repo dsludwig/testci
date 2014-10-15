@@ -1,0 +1,14 @@
+package:
+  name: testci
+  version: 1.0.0
+
+build:
+  number: {{environ.get('BINSTAR_BUILD', 1)}}
+
+  script:  |
+     echo  hello binstar build world
+     
+
+about:
+  summary: This is a simple package to test binstar-build
+
