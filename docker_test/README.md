@@ -34,8 +34,8 @@ group
 ```sh
 binstar-build -s alpha submit \
     https://github.com/binstar/testci \
-    --test-only
-    --sub-dir docker_test
+    --test-only \
+    --sub-dir docker_test \
     --queue build-binstar-docker
 ```
 
