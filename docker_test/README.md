@@ -97,7 +97,7 @@ The format is:
         ...
         ```
      1. Build your image: `docker build .`
-     1. Tag your image: `docker build <IMAGE-ID> docker-account/image-name`
+     1. Tag your image: `docker tag <IMAGE-ID> docker-account/image-name`
      1. Push your image to docker hub: `docker push docker-account/image-name`
  1. Use your image in your next build by editing your
     [.binstar.yml](https://github.com/Binstar/testci/blob/master/docker_test/.binstar.yml) file. Set the a yaml tag `docker_image` to `docker-account/image-name`
