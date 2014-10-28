@@ -26,7 +26,7 @@ group
 ## Submit a build
 
 ```sh
-binstar-build -s alpha submit \
+binstar-build  submit \
     https://github.com/binstar/testci \
     --test-only 
     --queue build-binstar-continuum 
@@ -39,24 +39,6 @@ A breakdown of the submit command:
 The build script and platforms are controlled with a  [.binstar.yml](https://github.com/binstar/testci/blob/master/.binstar.yml) file,
 Check out the in-line comments for what the submit command is doing behind the scenes.
 
-### -s alpha
-
-This tells the binstar-build command line to use the [alpha binstar site](http://alpha.binstar.org)
- 
-To make this your default, run 
-
-    binstar config --set default_site alpha
-    
-**Note: ** if you set alpha as your default site you can always 
-use the [main binstar site](http://binstar.org) with:
- 
-    binstar-build -s binstar ...
-    
-or
-
-    binstar -s binstar ...
-
-
 ### https://github.com/binstar/testci
 
 Submit a build from the `binstar/testci` repository 
@@ -68,7 +50,7 @@ You can also build from a subdirectory and/or a branch of the repo
 The following command is also valid:
 
 ```sh
-binstar-build -s alpha submit \
+binstar-build submit \
     https://github.com/binstar/testci#test_sub_dir \
     --sub-dir recipe_dir
     --test-only 
