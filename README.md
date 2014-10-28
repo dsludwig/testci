@@ -18,14 +18,11 @@ group
  
 # Submitting your build to the queue
 
-## Install binstar-build
 
-    conda install -c binstar binstar-build
-
-**Make sure** that you are on binstar-build version 0.7.1
+**Make sure** that you are on binstar-build version >= 0.8
  
     $ binstar-build -V
-    binstar-build Command line client (version 0.7.0)
+    binstar-build Command line client (version 0.8.2)
     
 ## Submit a build
 
