@@ -7,6 +7,7 @@ platform:
 test:
   # Here I am using the windows cmd.exe just to show that this is windows
   #, but this can be a any batch script command or just 'echo Hello ...'
+  - echo %PATH%
   - cmd /c echo Hello Windows Batch Command
 script:
   - conda build .
