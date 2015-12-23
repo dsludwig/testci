@@ -12,6 +12,7 @@ test:
   - bash -c 'echo Hello Posix World'
   - conda install nose
   - nosetests --with-xunit
+  - sudo yum install freeglut
 
 script:
   - conda build .
