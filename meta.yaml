@@ -3,7 +3,7 @@ package:
   version: 1.0.0
 
 build:
-  number: {{environ.get('BINSTAR_BUILD', 1)}}
+  number: {{environ.get('BINSTAR_BUILD_MAJOR', 1)}}
 
   script:  |
      echo  hello binstar build world
