@@ -1,39 +1,10 @@
 # Specify the package name 
 package: testci
 
-# Define the plaform(s) we want to run on
 platform: 
-  - win-64
-  - win-32
-engine:
-  - python=2.6
-
-test:
-  # Here I am using the windows cmd.exe just to show that this is windows
-  #, but this can be a any batch script command or just 'echo Hello ...'
-  - where python
-  - cmd /c echo Hello Windows Batch Command
-  - conda install nose
-  - nosetests --with-xunit
-
-script:
-  - conda build .
-
-# Tell the build worker we want to upload the resulting conda package
-build_targets: conda
-
-
-# The --- syntax is a valid yaml syntax to denote a new document.
-# In this case --- Shows that we are *appending* a new bulid configuration
----
-
-platform: 
-  - linux-64
-  - linux-32
   - osx-64
 engine:
   - python=2.6
-
 
 test:
   # Here I am using the posix bash shell just to show that this is posix
@@ -47,6 +18,10 @@ script:
 
 # Tell the build worker we want to upload the resulting conda package
 build_targets: conda
+
+channels:
+  - foo
+  - bar
 
 
 ##########################################################################################
