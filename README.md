@@ -1,4 +1,4 @@
-Test out the new binstar Build 
+Test out the new Anaconda Build 
 ================================
 
 **Warning:** There are only binstar-build conda packages for osx-64 and linux-64
