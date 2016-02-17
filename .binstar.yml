@@ -1,10 +1,13 @@
 # Specify the package name 
 package: testci
 
-platform: 
+build:
+  number: 1
+
+platform:
   - linux-64
 engine:
-  - python=2.6
+  - python=2.7
 
 test:
   # Here I am using the posix bash shell just to show that this is posix
@@ -12,31 +15,15 @@ test:
   - bash -c 'echo Hello Posix World'
   - conda install nose
   - nosetests --with-xunit
-  - sudo yum install freeglut
 
 script:
   - conda build .
+  - env
+  # - echo $BINSTAR_API_TOKEN
+  # - echo $BINSTAR_API_SITE
 
 # Tell the build worker we want to upload the resulting conda package
-build_targets: conda
+build_targets:
+  files: conda
+  channels: [foo, bar]
 
-channels:
-  - foo
-  - bar
-
-
-##########################################################################################
-# Advanced Note
-# Since echo is the same for windoes as is it for posix, we could remove the '---' document 
-# seporator and the following .binstar.yaml configuration would work as well.
-##########################################################################################
-
-# package: testci
-# platform: 
-#   - win-64
-#   - linux-64
-#   - osx-64
-# test:
-#   - echo Hello Windows or Posix Command
-#   - conda build .
-# build_targets: conda
