@@ -4,6 +4,12 @@ package:
 
 build:
   number: {{environ.get('BINSTAR_BUILD_MAJOR', 1)}}
+  noarch_python: true
+
+
+requirements:
+  run:
+    - python
 
 
 about:

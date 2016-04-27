@@ -1,7 +1,8 @@
 #!/bin/bash
 
 echo hello world. This is a conda build.
-/opt/miniconda/bin/python -c '
+exec_prefix=$(conda info --json | python -c 'import json,sys;print(json.load(sys.stdin)["root_prefix"])')
+$exec_prefix/bin/python -c '
 import time
 import sys
 from conda.progressbar import ProgressBar

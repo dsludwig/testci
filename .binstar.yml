@@ -5,9 +5,9 @@ build:
   number: 1
 
 platform:
-  - win-32
-  - win-64
-  - osx-64
+  #  - win-32
+  # - win-64
+  # - osx-64
   - linux-64
 engine:
   - python=2.7
@@ -26,9 +26,8 @@ engine:
   # - nosetests --with-xunit
 
 script:
-  - conda build .
   - env
-  - python -c 'import sys; [sys.stdout.write("\r%s" % x) for x in range(100)]'
+  # - conda build .
   # - echo $BINSTAR_API_TOKEN
   # - echo $BINSTAR_API_SITE
 
