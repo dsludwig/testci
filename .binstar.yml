@@ -34,5 +34,6 @@ script:
 # Tell the build worker we want to upload the resulting conda package
 build_targets:
   files: conda
-  channels: [foo, bar]
+  channels:
+    - $GIT_BRANCH
 
